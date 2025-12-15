@@ -1,4 +1,6 @@
-# Introduction
+# Retail Sales Data 2023 
+
+## Introduction
 
 ### This data analytics project is performed as an assigned task in fulfilment of the Oasis Infobyte internship program (December Batch 2025).
 ### The data was provided by the team through an open-source data platform, Kaggle. It contains a sales record of a retail store from 2023, alongside key fields such as Customer Gender, Product Name, Age, Product type, and the amount and Quantity purchased by each customer.
