@@ -79,14 +79,16 @@ unique(Retail_Sales_Data_retail_sales_dataset)
 
 #### To remove duplicates and have only a unique set
 ```R
-Retail_Sales<-duplicate(Retail_Sales_Data_retail_sales_dataset) *<- renames the dataset*
+Retail_Sales<-distinct(Retail_Sales_Data_retail_sales_dataset) 
 ```
+*<- renames the dataset*
 
 ```R
-head(Retail_sales)` *<-shows the first 10 rows of the dataset*
-
-names(Retail_sales)` *<-shows the column names*
+head(Retail_sales)` 
+names(Retail_sales)` 
 ```
+*<-shows the first 10 rows of the dataset*
+*<-shows the column names*
 
 - Transaction_ID
 - Day_of_Week
