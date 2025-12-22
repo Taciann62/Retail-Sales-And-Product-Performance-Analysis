@@ -112,11 +112,13 @@ Food_Data<-Food_Data %>%
   mutate(Total_Amt =rowSums(select(., Fish_Sales, Fruits_Sales, Meat_Sales, Wine_Sales, Gold_Sales, Sweet_Sales), na.rm = TRUE))
 ```
 
-Ensure numeric rows are positive.
+Ensure numeric rows are positive. This was done because the rows data set did not contain any returns or refunds made by the e-commerce store.
+
 ```R
 Food_Data <- Food_Data %>% 
   mutate(across(where(is.numeric), abs))
 ```
+
 The columns Z_Revenue and Z_Cost were dropped due to uncertainty about what they represented, as the dictionary provided did not define these columns. 
 ```R
 Food_Data<-Food_Data %>% 
