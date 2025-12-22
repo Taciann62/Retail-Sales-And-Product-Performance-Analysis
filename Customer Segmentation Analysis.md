@@ -175,18 +175,19 @@ Result:
 | Meat         | 33,5607      | 166.06         | 219.87             |
 | Sweet        | 55,110       | 27.27          | 41.58              |
 | Fish         | 75,997       | 37.60          | 54.89              |
+
 ### Understanding K-Means and application.
 
-K-means, in basic terms, is a process that enables analysts to segment data into groups of clusters based on specific similarities that are crucial.
+K-means, in basic terms, is a process that enables analysts to segment data into groups of clusters based on specific similarities that are crucial to understanding customer behaviour.
 
 
 
 
-| Expenditure Level | Total Spent | Average Spent | Total Income | Average Income |
-|-------------------|--------------|----------------|------------|----------------|
-| High Spenders     | 740,380      | 1394.31        | 40,248,665 | 75,798         |
-| Mid Spenders      | 398,543      | 714.23         | 32,104,882 | 57,536         |
-| Low Spenders      | 89,261       | 95.77          | 32,106,403 | 34,449         |
+| Expenditure Level | Total Spent | Average Spent | Total Income | Average Income | Purchasing Frquency|
+|-------------------|--------------|----------------|------------|----------------|--------------------|
+| High Spenders     | 740,380      | 1394.31        | 40,248,665 | 75,798         | 531                |
+| Mid Spenders      | 398,543      | 714.23         | 32,104,882 | 57,536         | 558                |
+| Low Spenders      | 89,261       | 95.77          | 32,106,403 | 34,449         | 932                |
 
 
 
