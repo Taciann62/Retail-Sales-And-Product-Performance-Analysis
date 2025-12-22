@@ -135,19 +135,14 @@ Remove Duplicates and check for missing values: This reduced the data from 2205 
 The household income was reviewed, total, average, and standard deviations the  
 
 ```R
-Household_Income <- Food_Data %>% 
+Overall_Summary <- Food_Data %>% 
   summarise(Total_income = sum(Household_income), Avg_income =mean(Household_income), Total_Amt = sum(Total_Amt),
-            Avg_total = mean(Total_Amt), Median = median(Total_Amt))
+            Avg_total = mean(Total_Amt), Median = median(Total_Amt), Standard_Deviation = sd(Total_Amt))
 ```
 
-| Total Income | Average Income| Total Amount Spent  | Average Amount Spent |
-|--------------|---------------|---------------------|--------------------|
-| Fruit        | 53,283       | 26.365         | 39.78              |
-| Gold         | 88,766       | 43.92          | 51.68              |
-| Wine         | 61,9421      | 306.49         | 337.60             |
-| Meat         | 33,5607      | 166.06         | 219.87             |
-| Sweet        | 55,110       | 27.27          | 41.58              |
-| Fish         | 75,997       | 37.60          | 54.89              |
+| Total Income | Average Income| Total Amount Spent  | Average Amount Spent |Median Amount Spent|Standard Deviation|
+|--------------|---------------|---------------------|----------------------|-------------------|------------------|
+| 104,459,950  | 51687.26      | 	1,228,184          |    607.711           |     397           | 602.396
 
 
 Analysis on each product was conducted as well to understand the sales pattern, most sold, least sold and distribution:
