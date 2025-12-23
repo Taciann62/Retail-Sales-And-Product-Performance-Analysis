@@ -178,7 +178,34 @@ Result:
 
 ### Understanding K-Means and application.
 
-K-means, in basic terms, is a process that enables analysts to segment data into groups of clusters based on specific similarities that are crucial to understanding customer behaviour.
+K-means, in basic terms, is a process that enables analysts to segment data into groups of clusters based on specific similarities that are crucial to understanding customer behaviour. To determine who the High, Mid, and Low spenders are based on their purchase patterns and preferences.
+- Step 1: In applying this process, I selected key fields necessary to get insight into this data, columns like Household Income, Age, Total Amount Spent, Products sold, etc, as seen in the syntax below:
+```R
+  Foodclustered_data <- Food_Data %>%
+  select(Household_income, Total_Amt, Fish_Sales, Wine_Sales, Meat_Sales, Gold_Sales,
+         Fruits_Sales, Sweet_Sales, Web_Purchases, Web_Traffic, Discounted_Purchase, Catalogue_Purchases, In_Store_Purchase, Cust_Age) %>%
+  drop_na()) 
+```
+- Step 2: After the Food Clustered Data table is created, I proceed to scale the data using the Scale() function on R. This function 
+```R
+FoodScaled_data <- scale(Foodclustered_data)
+```
+<img width="1366" height="768" alt="Screenshot (86)" src="https://github.com/user-attachments/assets/604f2952-a4c6-4f97-a2e7-a6879f794168" />
+
+The scaled data is then reviewed in a plot called the Elbow method. This Elbow method provides insight into where the cluster is applied in the syntax for what is called the centroid:
+```R
+set.seed(123)
+wss<-sapply(1:10, function(k){kmeans(FoodScaled_data, k, nstart = 20)$tot.withinss})
+
+plot(1:10, wss, type ="b", pch = 19, frame = FALSE, xlab = "Number of Clusters K", ylab = "Total within-cluster sum of squares" )
+```
+
+
+
+
+
+
+
 
 
 
