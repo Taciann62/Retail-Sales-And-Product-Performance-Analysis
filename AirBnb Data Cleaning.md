@@ -67,7 +67,7 @@ AB_NYC <- AB_NYC %>%
 AB_NYC <- AB_NYC %>% 
   mutate(Year = year(last_review))
 ```
-After which,the dataset was expended from 16 column to 20 columns. Missing values were imputed as such: 
+After which,the dataset was expanded from 16 column to 20 columns. Missing values were imputed as such: 
 ```R
 AB_NYC <- AB_NYC %>%
   mutate(name = ifelse(is.na(name), "Unknown", name))
@@ -141,7 +141,7 @@ Drop rows where prices = 0 so as to easily apply IQR to yield clear result and r
 AB_NYC <- AB_NYC %>%
   filter(price > 0)
 ```
-
+This further dropped the rows from 48895 to 45912
 ### Detecting and Fixing Outliers. 1. Calculate IQR for Price
 
 quantile(AB_NYC$price)
@@ -176,7 +176,8 @@ library(ggplot2)
 
 boxplot(AB_NYC_Final$price, main = "Boxplot of Price", ylab = "Total Prices", col = "Red")
 
-<img width="533" height="229" alt="Box plot with no outliers" src="https://github.com/user-attachments/assets/c374911d-a559-49d7-baaa-9c7538b7a6ba" />
+<img width="533" height="376" alt="Airbnb Price Wout Outliers" src="https://github.com/user-attachments/assets/057f3995-5d6e-46eb-be7b-0a58fe5c15b5" />
+
 
 top_performing_cities<-AB_NYC_Final %>% 
  group_by(Year, Month) %>% 
