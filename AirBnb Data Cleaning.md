@@ -176,6 +176,7 @@ library(ggplot2)
 
 boxplot(AB_NYC_Final$price, main = "Boxplot of Price", ylab = "Total Prices", col = "Red")
 
+<img width="533" height="229" alt="Box plot with no outliers" src="https://github.com/user-attachments/assets/c374911d-a559-49d7-baaa-9c7538b7a6ba" />
 
 top_performing_cities<-AB_NYC_Final %>% 
  group_by(Year, Month) %>% 
