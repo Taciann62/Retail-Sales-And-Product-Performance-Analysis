@@ -67,7 +67,7 @@ AB_NYC <- AB_NYC %>%
 AB_NYC <- AB_NYC %>% 
   mutate(Year = year(last_review))
 ```
-After which, missing values were imputed as such: 
+After which,the dataset was expended from 16 column to 20 columns. Missing values were imputed as such: 
 ```R
 AB_NYC <- AB_NYC %>%
   mutate(name = ifelse(is.na(name), "Unknown", name))
