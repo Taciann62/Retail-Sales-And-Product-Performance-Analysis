@@ -178,6 +178,7 @@ boxplot(AB_NYC_Final$price, main = "Boxplot of Price", ylab = "Total Prices", co
 
 <img width="533" height="376" alt="Airbnb Price Wout Outliers" src="https://github.com/user-attachments/assets/057f3995-5d6e-46eb-be7b-0a58fe5c15b5" />
 
+After cleaning and removing invalid and extreme pricing values, Airbnb listings showed a strong concentration between $65–$175 per night. Listings priced above $334 were identified as statistical outliers and removed to prevent skewed summaries. Review segmentation revealed that most listings fall within the “Poor” to “Good” engagement range, indicating opportunities for hosts to improve visibility and guest interaction.
 
 top_performing_cities<-AB_NYC_Final %>% 
  group_by(Year, Month) %>% 
