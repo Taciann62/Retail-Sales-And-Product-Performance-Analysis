@@ -205,21 +205,17 @@ After cleaning and removing invalid and extreme pricing values, Airbnb listings 
 
 ### Aggregated Analysis
 Listings were grouped by room type and neighbourhood group to compute:
-Total number of reviews
-Average reviews per listing
-Total host listings
-Average host activity
-Listing counts by category
+- Total number of reviews
+- Average reviews per listing
+- Total host listings
+- Average host activity
+- Listing counts by category
 
-This aggregation supports downstream visualization and comparative market analysis.
-
-Insights Derived
+#### Insights Derived
 Airbnb prices in NYC are heavily concentrated between $65 and $175 per night
 Most listings fall into the Poor to Good review engagement segments, suggesting opportunities for hosts to improve visibility and customer interaction
 Manhattan and Brooklyn dominate both pricing and review activity, by month and room type.
 
-
-write.csv(AB_NYC_Final, "AB_NYC_Analysis_Final.csv", row.names = FALSE)
 
 
 
